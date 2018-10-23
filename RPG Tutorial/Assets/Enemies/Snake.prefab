@@ -9,61 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1888488068438804}
+  m_RootGameObject: {fileID: 1198759891595414}
   m_IsPrefabAsset: 1
---- !u!1 &1888488068438804
+--- !u!1 &1198759891595414
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4671263002121660}
-  - component: {fileID: 212485881950267388}
-  - component: {fileID: 114221371881455938}
+  - component: {fileID: 4021288826357468}
+  - component: {fileID: 212234817548382576}
   m_Layer: 0
-  m_Name: MainPlayer
+  m_Name: Snake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4671263002121660
+--- !u!4 &4021288826357468
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888488068438804}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 1.16, z: -413.3673}
+  m_GameObject: {fileID: 1198759891595414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.57908297, y: -0.5014741, z: -0.03893557}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114221371881455938
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888488068438804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9294140b5d544744a37f8d3b8f29739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  mana: 0
-  attack: 0
-  magic: 0
-  defense: 0
-  speed: 0
---- !u!212 &212485881950267388
+--- !u!212 &212234817548382576
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888488068438804}
+  m_GameObject: {fileID: 1198759891595414}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -93,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2aebd2bfa13600f418f5722c5ca56773, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d14da53499db4f459830d4098c66427, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1.56, y: 1.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
