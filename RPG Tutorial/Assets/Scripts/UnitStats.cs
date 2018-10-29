@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UnitStats : MonoBehaviour {
+public class UnitStats : MonoBehaviour, IComparable {
 
 	public float health;
 	public float mana;
@@ -10,14 +12,20 @@ public class UnitStats : MonoBehaviour {
 	public float magic;
 	public float defense;
 	public float speed;
+
+	public int nextActTurn;
+
+	private bool dead = false;
 	
-	// Use this for initialization
-	void Start () {
-		
+	public void calculateNextActTurn(int currentTurn) {
+		this.nextActTurn = currentTurn + (int)Math.Ceiling(100.0f / this.speed);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public int CompareTo(object otherStats) {
+		return nextActTurn.CompareTo(((UnitStats)otherStats).nextActTurn);
+	}
+
+	public bool isDead() {
+		return this.dead;
 	}
 }
