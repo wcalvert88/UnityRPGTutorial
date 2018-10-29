@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class UnitStats : MonoBehaviour, IComparable {
 
+	[SerializeField] private Animator animator;
+	[SerializeField] private GameObject damageTextPrefab;
+	[SerializeField] private Vector2 damageTextPosition;
+
 	public float health;
 	public float mana;
 	public float attack;
@@ -27,5 +31,22 @@ public class UnitStats : MonoBehaviour, IComparable {
 
 	public bool isDead() {
 		return this.dead;
+	}
+
+	public void receiveDamage(float damage) {
+		this.health -= damage;
+		animator.Play("Hit");
+
+		GameObject HUDCanvas = GameObject.Find("HUDCanvas");
+		GameObject damageText = Instantiate(this.damageTextPrefab, HUDCanvas.transform) as GameObject;
+		damageText.GetComponent<Text>().text = "" + damage;
+		damageText.transform.localPosition = this.damageTextPosition;
+		damageText.transform.localScale = new Vector2(1.0f, 1.0f);
+
+		if (this.health <= 0) {
+			this.dead = true;
+			this.gameObject.tag = "DeadUnit";
+			Destroy(this.gameObject);
+		}
 	}
 }

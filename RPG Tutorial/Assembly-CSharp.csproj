@@ -53,11 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AddButtonCallback.cs" />
      <Compile Include="Assets\Scripts\AttackTarget.cs" />
      <Compile Include="Assets\Scripts\CreateEnemyMenuItems.cs" />
+     <Compile Include="Assets\Scripts\EnemyUnitAction.cs" />
      <Compile Include="Assets\Scripts\KillEnemy.cs" />
      <Compile Include="Assets\Scripts\PlayButton.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerUnitAction.cs" />
+     <Compile Include="Assets\Scripts\SelectUnit.cs" />
      <Compile Include="Assets\Scripts\ShowUnitHealth.cs" />
      <Compile Include="Assets\Scripts\ShowUnitMana.cs" />
      <Compile Include="Assets\Scripts\SpawnEnemy.cs" />
